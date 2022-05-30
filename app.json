@@ -24,11 +24,21 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#000000"
+      },
+      "package": "com.hirononoyama.reminder_app"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-notifications",
+      [
+        "react-native-health",
+        {
+          "healthSharePermission": "ウェルネスが健康データにアクセスすることを許可しますか？"
+        }
+      ]
+    ]
   }
 }
