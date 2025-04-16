@@ -1,0 +1,22 @@
+name: TMP
+
+on:
+  workflow_dispatch:
+
+jobs:
+  TMP:
+    runs-on: ubuntu-latest
+    # permissions:
+    #   contents: write
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Change temporary
+        run: |
+          echo "This is a temporary file." > tmp.txt
+          git add tmp.txt
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: TMP CHANGE
